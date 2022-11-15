@@ -13,8 +13,7 @@ export class EventsService {
     });           
   }
   
-  async getFutureEventWithWorkshops() {   
-    console.log(Date.now());
+  async getFutureEventWithWorkshops() {       
       return await Event.findAll({
         include: [{
           model: Workshop,

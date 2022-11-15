@@ -95,8 +95,7 @@ export class MenuItemsController extends Controller {
 
   async getMenuItems(req: Request, res: Response, next: NextFunction) {
     return await this.menuItemService.getMenuItems()
-      .then((data) => {
-        console.log(data);
+      .then((data) => {        
         res.json(data);
       })
       .catch((e: Error) => {
